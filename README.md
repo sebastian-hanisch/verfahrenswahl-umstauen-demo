@@ -1,7 +1,6 @@
 # Verfahrenswahl: Regel, Suche oder Schranke? – Streamlit-Demo
 
-<!-- TODO nach dem Deploy: direkt hierher den Live-Link setzen (Leerzeile davor und danach):
-**[→ Demo live ausprobieren](https://sebastianhanisch-verfahrenswahl-umstauen-demo.streamlit.app/)** -->
+**[→ Demo live ausprobieren](https://sebastianhanisch-verfahrenswahl-umstauen-demo.streamlit.app/)**
 
 Fünfzehntes und letztes Stück der Konzepte-Reihe **„Umstauen: Untergrenze und Suche“** für die Website „Sebastian Hanisch – Operations Research und Machine Learning“. Die Reihe hat Verfahren gebaut: die **Regel „engste Passung“**, die **Untergrenze**, die **exakte Suche**, das **ILP**, die **Spaltenformulierung** und mehr. **Welches genügt wann?** Die Demo gibt keine Gewinnerin an, sondern eine **Karte**: Sie **rechnet** an einer Bucht die Regel, die Untergrenze und die exakte Suche im gewählten **Knotenbudget**, **empfiehlt** und zeigt die **gemessene Karte** über Stapel und Lagen. Dazu die **Verfahrenskarte der ganzen Linie** mit Frage, Faustregel und Link je Stück.
 
