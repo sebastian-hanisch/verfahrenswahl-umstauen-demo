@@ -1,0 +1,268 @@
+{
+ "karte": {
+  "12,2": {
+   "excess": 0.0,
+   "gap_lb2": 0.0,
+   "n": 40,
+   "nodes_max": null,
+   "nodes_median": null,
+   "proven": 40,
+   "rule_eq_lb1": 33,
+   "solved": 0,
+   "unsolved": 0
+  },
+  "12,3": {
+   "excess": 0.0027777777777777775,
+   "gap_lb2": 0.03586856512940104,
+   "n": 40,
+   "nodes_max": 13724,
+   "nodes_median": 83.0,
+   "proven": 25,
+   "rule_eq_lb1": 16,
+   "solved": 15,
+   "unsolved": 0
+  },
+  "12,4": {
+   "excess": 0.00851693462530901,
+   "gap_lb2": 0.11256487325772556,
+   "n": 40,
+   "nodes_max": 89467,
+   "nodes_median": 1432.0,
+   "proven": 7,
+   "rule_eq_lb1": 1,
+   "solved": 14,
+   "unsolved": 19
+  },
+  "12,5": {
+   "excess": 0.0248015873015873,
+   "gap_lb2": 0.17739149234508336,
+   "n": 40,
+   "nodes_max": 68958,
+   "nodes_median": 20184.0,
+   "proven": 1,
+   "rule_eq_lb1": 0,
+   "solved": 5,
+   "unsolved": 34
+  },
+  "3,2": {
+   "excess": 0.013888888888888888,
+   "gap_lb2": 0.013888888888888888,
+   "n": 40,
+   "nodes_max": 10,
+   "nodes_median": 10.0,
+   "proven": 38,
+   "rule_eq_lb1": 25,
+   "solved": 2,
+   "unsolved": 0
+  },
+  "3,3": {
+   "excess": 0.020416666666666666,
+   "gap_lb2": 0.12357142857142855,
+   "n": 40,
+   "nodes_max": 33,
+   "nodes_median": 12.0,
+   "proven": 23,
+   "rule_eq_lb1": 13,
+   "solved": 17,
+   "unsolved": 0
+  },
+  "3,4": {
+   "excess": 0.05018849206349206,
+   "gap_lb2": 0.39430735930735933,
+   "n": 40,
+   "nodes_max": 206,
+   "nodes_median": 34.5,
+   "proven": 4,
+   "rule_eq_lb1": 0,
+   "solved": 36,
+   "unsolved": 0
+  },
+  "3,5": {
+   "excess": 0.1324038362738053,
+   "gap_lb2": 0.6366351703851704,
+   "n": 40,
+   "nodes_max": 1525,
+   "nodes_median": 243.5,
+   "proven": 0,
+   "rule_eq_lb1": 0,
+   "solved": 40,
+   "unsolved": 0
+  },
+  "4,2": {
+   "excess": 0.0,
+   "gap_lb2": 0.0,
+   "n": 40,
+   "nodes_max": null,
+   "nodes_median": null,
+   "proven": 40,
+   "rule_eq_lb1": 29,
+   "solved": 0,
+   "unsolved": 0
+  },
+  "4,3": {
+   "excess": 0.005902777777777778,
+   "gap_lb2": 0.10307539682539682,
+   "n": 40,
+   "nodes_max": 135,
+   "nodes_median": 18.0,
+   "proven": 27,
+   "rule_eq_lb1": 11,
+   "solved": 13,
+   "unsolved": 0
+  },
+  "4,4": {
+   "excess": 0.09582029082029082,
+   "gap_lb2": 0.316749777999778,
+   "n": 40,
+   "nodes_max": 2608,
+   "nodes_median": 166.5,
+   "proven": 6,
+   "rule_eq_lb1": 2,
+   "solved": 34,
+   "unsolved": 0
+  },
+  "4,5": {
+   "excess": 0.12002997808435115,
+   "gap_lb2": 0.45922254828504827,
+   "n": 40,
+   "nodes_max": 11224,
+   "nodes_median": 730.5,
+   "proven": 0,
+   "rule_eq_lb1": 0,
+   "solved": 40,
+   "unsolved": 0
+  },
+  "5,2": {
+   "excess": 0.0,
+   "gap_lb2": 0.0,
+   "n": 40,
+   "nodes_max": null,
+   "nodes_median": null,
+   "proven": 40,
+   "rule_eq_lb1": 28,
+   "solved": 0,
+   "unsolved": 0
+  },
+  "5,3": {
+   "excess": 0.009791666666666667,
+   "gap_lb2": 0.08029761904761905,
+   "n": 40,
+   "nodes_max": 449,
+   "nodes_median": 32.0,
+   "proven": 25,
+   "rule_eq_lb1": 9,
+   "solved": 15,
+   "unsolved": 0
+  },
+  "5,4": {
+   "excess": 0.056441699640229055,
+   "gap_lb2": 0.2499064477189477,
+   "n": 40,
+   "nodes_max": 28017,
+   "nodes_median": 192.5,
+   "proven": 6,
+   "rule_eq_lb1": 1,
+   "solved": 34,
+   "unsolved": 0
+  },
+  "5,5": {
+   "excess": 0.0789500276628423,
+   "gap_lb2": 0.3487761478502578,
+   "n": 40,
+   "nodes_max": 82538,
+   "nodes_median": 4364.0,
+   "proven": 1,
+   "rule_eq_lb1": 1,
+   "solved": 36,
+   "unsolved": 3
+  },
+  "6,2": {
+   "excess": 0.0,
+   "gap_lb2": 0.0,
+   "n": 40,
+   "nodes_max": null,
+   "nodes_median": null,
+   "proven": 40,
+   "rule_eq_lb1": 29,
+   "solved": 0,
+   "unsolved": 0
+  },
+  "6,3": {
+   "excess": 0.009375,
+   "gap_lb2": 0.06620039682539683,
+   "n": 40,
+   "nodes_max": 394,
+   "nodes_median": 26.0,
+   "proven": 27,
+   "rule_eq_lb1": 12,
+   "solved": 13,
+   "unsolved": 0
+  },
+  "6,4": {
+   "excess": 0.03090007907821673,
+   "gap_lb2": 0.22816174634189337,
+   "n": 40,
+   "nodes_max": 42643,
+   "nodes_median": 672.5,
+   "proven": 5,
+   "rule_eq_lb1": 1,
+   "solved": 34,
+   "unsolved": 1
+  },
+  "6,5": {
+   "excess": 0.07215276674104192,
+   "gap_lb2": 0.3341174236755826,
+   "n": 40,
+   "nodes_max": 81402,
+   "nodes_median": 19853.0,
+   "proven": 1,
+   "rule_eq_lb1": 0,
+   "solved": 26,
+   "unsolved": 13
+  },
+  "8,2": {
+   "excess": 0.0,
+   "gap_lb2": 0.0,
+   "n": 40,
+   "nodes_max": null,
+   "nodes_median": null,
+   "proven": 40,
+   "rule_eq_lb1": 31,
+   "solved": 0,
+   "unsolved": 0
+  },
+  "8,3": {
+   "excess": 0.004772727272727273,
+   "gap_lb2": 0.066864454989455,
+   "n": 40,
+   "nodes_max": 3615,
+   "nodes_median": 76.5,
+   "proven": 20,
+   "rule_eq_lb1": 11,
+   "solved": 20,
+   "unsolved": 0
+  },
+  "8,4": {
+   "excess": 0.01811833711071938,
+   "gap_lb2": 0.15926218367975334,
+   "n": 40,
+   "nodes_max": 73789,
+   "nodes_median": 1445.5,
+   "proven": 4,
+   "rule_eq_lb1": 2,
+   "solved": 34,
+   "unsolved": 2
+  },
+  "8,5": {
+   "excess": 0.0551208324409224,
+   "gap_lb2": 0.24578483033559367,
+   "n": 40,
+   "nodes_max": 95449,
+   "nodes_median": 16118.5,
+   "proven": 0,
+   "rule_eq_lb1": 0,
+   "solved": 12,
+   "unsolved": 28
+  }
+ }
+}
