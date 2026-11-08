@@ -185,6 +185,8 @@ def verdict_cell(stats: dict, name: str) -> tuple[str, str]:
     if stats["excess"] is not None and stats["gap_lb2"] is not None:
         grob = "brauchbar" if _le(stats["gap_lb2"], C.GAP_GOOD) else "grob"
         text += (f" Die Regel liegt im Mittel {percent_text(stats['excess'])} über dem Optimum und {percent_text(stats['gap_lb2'])} über LB2: als Gütebeweis ist LB2 hier {grob}.")
+        if stats["unsolved"]:
+            text += " Bei den ungelösten Buchten ist das Optimum unbekannt; der Wert gilt nur für die übrigen und ist eher zu niedrig."
     if _ge(share, C.CARRY_GOOD):
         return "success", text + " Die exakte Suche trägt hier."
     if _ge(share, C.CARRY_OK):

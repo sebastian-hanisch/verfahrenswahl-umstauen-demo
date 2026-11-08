@@ -47,6 +47,8 @@ def test_cell_verdict_three_states_and_numbers():
                                           "und 39 % über LB2: als Gütebeweis ist LB2 hier grob. Die exakte Suche trägt hier.")
     kind, text = ev.verdict_cell(_stats(7, 14, 19, 0.009, 0.113), "4 × 12")
     assert kind == "info" and text.endswith("Die exakte Suche trägt hier nur zum Teil.") and "als Gütebeweis ist LB2 hier brauchbar" in text
+    assert "Bei den ungelösten Buchten ist das Optimum unbekannt; der Wert gilt nur für die übrigen und ist eher zu niedrig." in text                          # Hinweis nur bei ungelösten Buchten
+    assert "ungelösten" not in ev.verdict_cell(_stats(4, 36, 0, 0.05, 0.394), "4 × 3")[1]
     kind, text = ev.verdict_cell(_stats(0, 12, 28, 0.055, 0.246), "5 × 8")
     assert kind == "warning" and text.endswith("Die exakte Suche trägt hier nicht mehr.")
 

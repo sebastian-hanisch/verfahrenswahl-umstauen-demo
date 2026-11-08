@@ -42,6 +42,7 @@ def test_four_and_five_layers_the_search_carries_less_and_the_rule_gap_to_lb2_is
     assert [k[K(s, 5)]["solved"] for s in C.STACK_OPTIONS] == [40, 40, 36, 26, 12, 5] and [k[K(s, 5)]["unsolved"] for s in C.STACK_OPTIONS] == [0, 0, 3, 13, 28, 34]
     gaps = [k[K(s, l)]["gap_lb2"] for s in C.STACK_OPTIONS for l in (4, 5)]
     assert round(min(gaps), 2) == 0.11 and round(max(gaps), 2) == 0.64                                       # der Regelabstand zu LB2 liegt bei 4 und 5 Lagen zwischen 11 und 64 %
+    assert round(sorted(gaps)[1], 2) == 0.16 and [s for s in C.STACK_OPTIONS for l in (4, 5) if k[K(s, l)]["gap_lb2"] < C.GAP_GOOD] == [12]               # nur 12 × 4 liegt unter der Schwelle von 15 %
     assert max(k[K(s, l)]["excess"] for s in C.STACK_OPTIONS for l in (4, 5)) < 0.14 and round(k[K(3, 5)]["excess"], 3) == 0.132
 
 

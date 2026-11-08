@@ -58,6 +58,6 @@ METHODS = (
     (10, "Asymptotik", "Wird die einfache Untergrenze bei vielen Stapeln scharf?", "Im Verhältnis ja, absolut bei hohen Stapeln nicht.", "stapelzahl-asymptotik-umstauen-demo"),
     (11, "Pre-Marshalling", "Wie sortiert man vor dem Abruf mit wenig Hüben um?", "Geht nur mit genug freien Plätzen und kostet mehr Hübe als das Umlagern beim Abruf.", "vorsortieren-umstauen-demo"),
     (12, "Einlagern", "Was ist eine Abfahrtsschätzung wert, wenn man sie nur zum Einlagern hat?", "Bei kleinem Schätzfehler fast das volle Wissen wert, bei großem nichts.", "einlagern-schaetzung-umstauen-demo"),
-    (13, "Unbekannte Abrufreihenfolge", "Was ist frühe Information wert?", "Schon wenige vorab bekannte Abrufe schließen den größten Teil der Lücke; der Grenznutzen sinkt schnell.", "abrufreihenfolge-unbekannt-umstauen-demo"),
-    (14, "Gelernter Verzweiger", "Wann lohnt Lernen, wenn die Untergrenze schon da ist?", "Es kann höchstens den Fund verkürzen, nicht den Beweis, und die Regel ist schon fast so gut wie das Orakel.", "gelernter-verzweiger-umstauen-demo"),
+    (13, "Unbekannte Abrufreihenfolge", "Was ist frühe Information wert?", "In kleinen Buchten schließen schon wenige vorab bekannte Abrufe den größten Teil der Lücke; bei 5 Stapeln und mehr braucht es deutlich mehr.", "abrufreihenfolge-unbekannt-umstauen-demo"),
+    (14, "Gelernter Verzweiger", "Wann lohnt Lernen, wenn die Untergrenze schon da ist?", "Eine bessere Reihenfolge kann im Wesentlichen nur den Fund verkürzen, nicht den Beweis; die Regel wählt meist ein optimales Kind zuerst, lässt aber gegenüber einem perfekten Orakel noch einen Teil der Knoten liegen.", "gelernter-verzweiger-umstauen-demo"),
 )

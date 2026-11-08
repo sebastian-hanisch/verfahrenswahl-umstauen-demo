@@ -6,7 +6,7 @@ Fünfzehntes und letztes Stück der Konzepte-Reihe **„Umstauen: Untergrenze un
 
 ## Warum dieses Problem
 
-Am Ende einer Reihe über Verfahren steht die Frage, welches man nimmt. Die Messung gibt eine Antwort in drei Teilen. **Bei zwei Lagen** genügt die Regel: Sie ist ab 4 Stapeln in jeder gemessenen Bucht **bewiesen optimal**, weil sie der Untergrenze LB2 (Stück 9) gleicht, ganz ohne Suche. **Bei drei Lagen** trägt die **exakte Suche** bis 36 Container in jeder Bucht (höchstens 13 724 Knoten). **Bei vier und fünf Lagen** trägt sie nur bis etwa 24 beziehungsweise 20 Container zuverlässig; dahinter bleibt die **Regel mit ihrem Abstand zur Untergrenze** als einzige Garantie, und dieser Abstand ist bei vier und fünf Lagen **grob** (11 bis 64 %), obwohl die Regel dort höchstens 13 % über dem Optimum liegt. Die **Lagen** entscheiden mehr als die Stapel.
+Am Ende einer Reihe über Verfahren steht die Frage, welches man nimmt. Die Messung gibt eine Antwort in drei Teilen. **Bei zwei Lagen** genügt die Regel fast immer: Sie ist ab 4 Stapeln in allen 40 gemessenen Buchten **bewiesen optimal**, weil sie der Untergrenze LB2 (Stück 9) gleicht, ganz ohne Suche. **Bei drei Lagen** löst die **exakte Suche** bis 36 Container alle 40 gemessenen Buchten je Zelle (höchstens 13 724 Knoten). **Bei vier und fünf Lagen** trägt sie nur bis etwa 24 beziehungsweise 20 Container zuverlässig; dahinter bleibt die **Regel mit ihrem Abstand zur Untergrenze** als einzige Garantie, und dieser Abstand ist bei vier und fünf Lagen meist **grob** (16 bis 64 %, nur 12 × 4 mit 11 %), obwohl die Regel dort im Mittel über die gelösten Buchten höchstens 13 % über dem Optimum liegt (einzelne Buchten bis 67 %; bei ungelösten Buchten unbekannt, tendenziell mehr). Die **Lagen** entscheiden mehr als die Stapel.
 
 ## Methode
 
@@ -51,19 +51,19 @@ Alle Zahlen sind Messungen an festen Buchten, nachgerechnet in `tests/test_claim
 | 8 × 5 (40) | 0 | 0 | 12 | 28 | 16 118,5 / 95 449 | 5,5 % | 25 % |
 | 12 × 5 (60) | 0 | 1 | 5 | 34 | 20 184 / 68 958 | 2,5 % | 18 % |
 
-- **Zwei Lagen:** ab 4 Stapeln ist die Regel in **allen 40** Buchten bewiesen optimal (bei 3 Stapeln in 38, die übrigen 2 löst die Suche mit 10 Knoten).
-- **Drei Lagen:** die Regel ist in 20 bis 27 von 40 Buchten bewiesen optimal, in den übrigen löst die Suche **alle** Buchten mit höchstens 13 724 Knoten (bis 36 Container); die Regel liegt höchstens 2 % über dem Optimum.
-- **Vier Lagen:** bewiesen in 4 bis 7 von 40; die Suche löst bis 20 Container alle Buchten, bei 24 und 32 Containern fehlen je 1 und 2, bei 48 Containern löst sie nur 14 von 40 (19 am Limit); die Regel liegt 1 bis 10 % über dem Optimum.
-- **Fünf Lagen:** fast nie bewiesen (0 bis 1 von 40); die Suche löst bis 20 Container alle Buchten, bei 25 Containern 36, bei 30 Containern 26, bei 40 nur 12 und bei 60 nur 5 von 40; die Regel liegt 2,5 bis 13 % über dem Optimum.
-- **Gütebeweis:** Der Abstand der Regel zu LB2 ist bei 2 und 3 Lagen klein (0 bis 12 %), bei 4 und 5 Lagen **grob** (11 bis 64 %), weil LB2 dort weit unter dem Optimum liegt (Stück 9).
-- **Verdikte der Karte:** 20 der 24 Zellen „trägt“, 2 (4 × 12 und 6 × 5) „zum Teil“, 2 (8 × 5 und 12 × 5) „trägt nicht mehr“.
+- **Zwei Lagen:** ab 4 Stapeln ist die Regel in **allen 40** gemessenen Buchten bewiesen optimal (bei 3 Stapeln in 38, die übrigen 2 löst die Suche mit 10 Knoten). Das gilt für diese 40 Buchten je Zelle, nicht für alle Buchten: In einer größeren Stichprobe (Seeds 0 bis 19 999, nicht im Test) ist die Regel bei 4 Stapeln in 0,3 % und bei 5 Stapeln in 0,1 % der Buchten ungleich LB2, ab 8 Stapeln wurde keine Ausnahme gefunden.
+- **Drei Lagen:** die Regel ist in 20 bis 27 von 40 Buchten bewiesen optimal, in den übrigen löst die Suche alle 40 gemessenen Buchten je Zelle mit höchstens 13 724 Knoten (bis 36 Container); die Regel liegt im Mittel höchstens 2 % über dem Optimum (einzelne Buchten bis 25 %).
+- **Vier Lagen:** bewiesen in 4 bis 7 von 40; die Suche löst bis 20 Container alle Buchten, bei 24 und 32 Containern fehlen je 1 und 2, bei 48 Containern löst sie nur 14 von 40 (19 am Limit); die Regel liegt bis 32 Container im Mittel 2 bis 10 % über dem Optimum, bei 48 Containern ist der Wert nur für die gelösten Buchten gemessen und eher zu niedrig.
+- **Fünf Lagen:** fast nie bewiesen (0 bis 1 von 40); die Suche löst bis 20 Container alle Buchten, bei 25 Containern 36, bei 30 Containern 26, bei 40 nur 12 und bei 60 nur 5 von 40; die Regel liegt bis 30 Container im Mittel 7 bis 13 % über dem Optimum (wo Buchten ungelöst bleiben, nur für die gelösten gemessen, eher zu niedrig).
+- **Gütebeweis:** Der Abstand der Regel zu LB2 ist bei 2 und 3 Lagen klein (0 bis 12 %), bei 4 und 5 Lagen meist **grob** (16 bis 64 %; nur 12 × 4 mit 11 % liegt unter der Schwelle von 15 %), vermutlich weil LB2 dort weit unter dem Optimum liegt (Stück 9; nicht gesondert gemessen).
+- **Verdikte der Karte:** 20 der 24 Zellen „trägt“, 2 (12 × 4 und 6 × 5) „zum Teil“, 2 (8 × 5 und 12 × 5) „trägt nicht mehr“.
 
 | Frage | Befund |
 |---|---|
-| **Genügt die Regel?** | Bei 2 Lagen ab 4 Stapeln in jeder Bucht, bewiesen. Bei 3 Lagen in 20 bis 27 von 40 bewiesen, sonst höchstens 2 % über dem Optimum. Bei 4 und 5 Lagen fast nie bewiesen und bis 13 % über dem Optimum. |
-| **Trägt die exakte Suche?** | Bei 3 Lagen bis 36 Container immer; bei 4 Lagen bis 20 Container immer, bei 48 nur zur Hälfte; bei 5 Lagen bis 20 Container immer, bei 40 Containern 12 von 40. |
-| **Was bleibt, wenn die Suche nicht trägt?** | Die Regel mit der Untergrenze: höchstens so viel über dem Optimum wie über LB2 (bei 5 Lagen und 40 Containern 25 %). |
-| **Was zählt mehr, Stapel oder Lagen?** | Die Lagen: Zusätzliche Stapel machen die Suche größer, aber die Regel besser (Regel über Optimum sinkt mit den Stapeln); zusätzliche Lagen machen beides schwerer. |
+| **Genügt die Regel?** | Bei 2 Lagen ab 4 Stapeln in allen 40 gemessenen Buchten, bewiesen. Bei 3 Lagen in 20 bis 27 von 40 bewiesen, sonst im Mittel höchstens 2 % über dem Optimum. Bei 4 und 5 Lagen fast nie bewiesen und im Mittel bis 13 % über dem Optimum (nur gelöste Buchten). |
+| **Trägt die exakte Suche?** | Mit 100 000 Knoten Budget: bei 3 Lagen bis 36 Container in allen gemessenen Buchten; bei 4 Lagen bis 20 Container in allen gemessenen Buchten, bei 48 Containern ein Ergebnis in 21 von 40; bei 5 Lagen bis 20 Container in allen gemessenen Buchten, bei 40 Containern 12 von 40. |
+| **Was bleibt, wenn die Suche nicht trägt?** | Die Regel mit der Untergrenze: höchstens so viel über dem Optimum wie über LB2 (bei 5 Lagen und 40 Containern im Mittel 25 %). |
+| **Was zählt mehr, Stapel oder Lagen?** | Die Lagen: Zusätzliche Stapel machen die Suche größer; die Regel liegt im Verhältnis zur Untergrenze besser, die Lücke zum Optimum sinkt nur tendenziell (bei vielen Stapeln nur für gelöste Buchten gemessen); zusätzliche Lagen machen beides schwerer. |
 
 **Presets** (Eigenschaften in `tests/test_presets.py`): „Alltag“ (4 × 3, Bucht 0: Regel 10 ist optimal, LB2 9, die Suche bestätigt mit 58 Knoten), „Zwei Lagen“ (8 × 2, Bucht 0: Regel 3 = LB2, bewiesen), „Die Suche trägt“ (6 × 3, Bucht 2: Regel 5, Optimum 4, 12 Knoten), „Die Regel braucht Hilfe“ (4 × 5, Bucht 6: Regel 25, Optimum 19, LB2 18, 640 Knoten), „Die Suche trägt nicht mehr“ (8 × 5, Bucht 0, Budget 10 000: Regel 34, LB2 28).
 
@@ -75,7 +75,8 @@ Alle Zahlen sind Messungen an festen Buchten, nachgerechnet in `tests/test_claim
 - **Knotenbudget statt Zeit:** „Die Suche trägt“ heißt: Das Ergebnis kommt innerhalb von 100 000 Knoten, kein Zeitbudget (Python, Einzelmessungen schwanken); mit mehr Budget trägt die Suche weiter.
 - **Volle Buchten, Platz 2, restricted;** teilgefüllte Buchten, anderer Platz und andere Hubmengen verschieben die Karte.
 - **Nur Regel, Untergrenze und Suche gemessen.** ILP und Spaltenformulierung (Stück 7 und 8), Vorsortieren (Stück 11), Einlagern (Stück 12), unbekannte Reihenfolgen (Stück 13) und gelernte Verzweiger (Stück 14) sind nicht Teil der Karte; ihre Fragen stehen in der Verfahrenskarte mit Link.
-- **Gütebeweis über LB2** ist nur bei niedrigen Stapeln brauchbar.
+- **Gütebeweis über LB2** ist nur bei wenigen Lagen brauchbar.
+- **Regel über Optimum:** Der Mittelwert schließt ungelöste Buchten aus und ist in Zellen mit vielen ungelösten Buchten (12 × 4, 6 × 5, 8 × 5, 12 × 5) eher zu niedrig; die gelösten Buchten sind die leichteren.
 
 ## Verifikation
 
@@ -129,7 +130,7 @@ pip install -r requirements-dev.txt
 pytest tests/ -v
 ```
 
-86 Tests, rund zwei Minuten.
+86 Tests, rund 250 Sekunden (gemessen auf einem ausgelasteten Rechner).
 
 Gebaut mit Streamlit und Plotly.
 

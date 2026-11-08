@@ -141,7 +141,7 @@ st.markdown("---")
 
 karte = _bands()["karte"]
 st.subheader("🔬 Experiment: Die gemessene Karte")
-st.caption(f"Je Zelle {C.KARTE_BAYS} feste Buchten (Platz 2), vorberechnet (`generate_precomputed.py`), Knotenbudget {num(C.KARTE_BUDGET)}. Links der Anteil der Buchten mit Ergebnis (Regel bewiesen oder Suche gelöst), rechts, wie weit die Regel über dem Optimum liegt.")
+st.caption(f"Je Zelle {C.KARTE_BAYS} feste Buchten (Platz 2), vorberechnet (`generate_precomputed.py`), Knotenbudget {num(C.KARTE_BUDGET)}. Links der Anteil der Buchten mit Ergebnis (Regel bewiesen oder Suche gelöst), rechts, wie weit die Regel im Mittel über dem Optimum liegt (nur über die Buchten mit bekanntem Optimum, bei vielen ungelösten Buchten eher zu niedrig).")
 st.plotly_chart(build_carry(karte), width="stretch", key="chart_carry")
 st.plotly_chart(build_excess(karte), width="stretch", key="chart_excess")
 tk = ["| Zelle (Container) | Regel = LB1 | Regel = LB2 (bewiesen) | Suche löst | nicht entschieden | Knoten Median / Maximum | Regel über Optimum | Regel über LB2 |", "|---|---|---|---|---|---|---|---|"]
@@ -179,11 +179,11 @@ st.markdown(
     """
 | Annahme | Was passiert, wenn sie verletzt ist | Wer setzt an |
 |---|---|---|
-| **Eine Karte aus 40 Buchten je Zelle** | Die Anteile sind grob; ein einzelner Eintrag („36 von 40“) kann um einige Buchten schwanken. | – |
+| **Eine Karte aus 40 Buchten je Zelle** | Die Anteile sind grob; ein einzelner Eintrag („36 von 40“) kann um einige Buchten schwanken. „Regel über Optimum“ ist ein Mittel über die gelösten Buchten und in Zellen mit vielen ungelösten Buchten eher zu niedrig. | – |
 | **Knotenbudget statt Zeit** | „Die Suche trägt“ heißt: Das Ergebnis kommt innerhalb von 100 000 Knoten. Das ist kein Zeitbudget (Python, Einzelmessungen schwanken); mit mehr Budget trägt die Suche weiter. | – |
 | **Volle Buchten, Platz 2, restricted** | Teilgefüllte Buchten, anderer Platz und andere Hubmengen (Stück 3) verschieben die Karte. | – |
 | **Nur Regel, Untergrenze und Suche gemessen** | ILP und Spaltenformulierung (Stück 7 und 8), Vorsortieren (Stück 11), Einlagern (Stück 12), unbekannte Reihenfolgen (Stück 13) und gelernte Verzweiger (Stück 14) sind nicht Teil der Karte; ihre Fragen stehen in der Verfahrenskarte mit Link. | Stück 7 bis 14 |
-| **Gütebeweis über LB2** | Der Abstand der Regel zu LB2 ist nur bei niedrigen Stapeln brauchbar; bei hohen liegt LB2 weit unter dem Optimum (Stück 9). | Stück 9 |
+| **Gütebeweis über LB2** | Der Abstand der Regel zu LB2 ist nur bei wenigen Lagen brauchbar; bei vielen liegt LB2 meist weit unter dem Optimum (Stück 9). | Stück 9 |
 """
 )
 
@@ -200,7 +200,7 @@ with st.expander("📐 Mathematische Formulierung"):
 
 **Exakte Suche.** IDA\* mit LB2 und Zustandsmerken (Stück 5, 6, 9). Mit dem Knotenbudget $B$: Ergebnis, wenn die Suche höchstens $B$ Knoten besucht, sonst „nicht entschieden“.
 
-**Gütebeweis.** Ohne Ergebnis der Suche gilt immer noch $\text{OPT} \le \text{G} \le (1 + \gamma)\,\text{OPT}$ mit $\gamma = \text{G}/\text{LB2} - 1$: Die Regel liegt höchstens $\gamma$ über dem Optimum. Der Wert $\gamma$ ist die einzige Garantie, wenn die Suche nicht trägt; er ist bei niedrigen Stapeln klein und bei hohen groß, weil LB2 dort weit unter dem Optimum liegt.
+**Gütebeweis.** Ohne Ergebnis der Suche gilt immer noch $\text{OPT} \le \text{G} \le (1 + \gamma)\,\text{OPT}$ mit $\gamma = \text{G}/\text{LB2} - 1$: Die Regel liegt höchstens $\gamma$ über dem Optimum. Der Wert $\gamma$ ist die einzige Garantie, wenn die Suche nicht trägt; er ist bei wenigen Lagen klein und bei vielen meist groß, vermutlich weil LB2 dort weit unter dem Optimum liegt.
 
 **Anteil mit Ergebnis.** Je Zelle: $\text{trägt} = (\#\text{bewiesen} + \#\text{gelöst}) / n$; Verdikt: trägt, wenn $\ge 90\,\%$, zum Teil ab $50\,\%$, sonst nicht.
         """
